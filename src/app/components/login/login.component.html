@@ -1,0 +1,80 @@
+<!-- Inicio -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <h3 class="text-center py-5">
+                Logo
+            </h3>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center">
+                    <p class="display-6">
+                        ¡Hola! Bienvenido a <span class="fw-bold">6 Delta</span>
+                    </p>
+                    <p class="lead">
+                        Para ingresar es necesario
+                        <span class="fw-bold">iniciar sesión</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Cierre inicio -->
+
+<!-- Formulario -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-11 col-sm-10 col-lg-6">
+            <form
+                class="border-0 text-dark font-weight-bold"
+                [formGroup]="angForm"
+                (ngSubmit)="postdata(angForm)"
+                autocomplete="off"
+            >
+                <div class="mb-3 form-group form-floating">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="usuario"
+                        name="usuario"
+                        placeholder="Usuario"
+                        formControlName="usuario"
+                        autocomplete="off"
+                        aria-describedby="usuarioHelp"
+                    />
+                    <label for="usuario" class="form-label">Usuario</label>
+                </div>
+                <div class="mb-3 form-floating">
+                    <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        formControlName="password"
+                        autocomplete="off"
+                    />
+                    <label for="password" class="form-label">Contraseña</label>
+                </div>
+                <div class="d-grid gap-4 col-11 mx-auto">
+                    <button type="submit" class="btn btn-primary fw-bold">
+                        Iniciar Sesión
+                    </button>
+                    <div class="text-center">
+                        <label
+                            class="form-check-label text-light"
+                            for="exampleCheck1"
+                            >Olvide mi contraseña
+                            <span class="badge bg-info text-dark"
+                                >¡Recuperala!</span
+                            ></label
+                        >
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Cierre formulario -->
